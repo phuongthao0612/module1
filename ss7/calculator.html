@@ -10,8 +10,8 @@
     <th>Calculator</th>
   </tr>
   <tr>
-    <td colspan="2"><input id="n1" type="number"/></td>
-    <td colspan="2"><input id="n2" type="number"/></td>
+    <td colspan="2"><input id="n1"/></td>
+    <td colspan="2"><input id="n2"/></td>
   </tr>
   <tr>
     <td><button id="add" onclick="addition()">Addition(+)</button></td>
@@ -25,29 +25,47 @@
   function addition(){
     let a = +document.getElementById("n1").value;
     let b = +document.getElementById("n2").value;
-    let result = a + b;
-    document.getElementById("result").innerHTML = "Result Addition:" + result;
+    let result;
+    if (isNaN(a) || isNaN(b)) {
+      alert("Input is not a number")
+    }
+    else {result = a + b;
+      document.getElementById("result").innerHTML = "Result Addition:" + result;
+    }
   }
   function subtraction() {
     let a = +document.getElementById("n1").value;
     let b = +document.getElementById("n2").value;
-    let result = a - b;
-    document.getElementById("result").innerHTML = "Result Subtraction:" + result;
+    let result;
+    if (isNaN(a) || isNaN(b)) {
+      alert("Input is not a number")
+    }
+    else {result = a - b;
+      document.getElementById("result").innerHTML = "Result Subtraction:" + result;
+    }
   }
   function multiplication() {
     let a = +document.getElementById("n1").value;
     let b = +document.getElementById("n2").value;
-    let result = a * b;
-    document.getElementById("result").innerHTML = "Result Multiplication:" + result;
+    let result;
+    if (isNaN(a) || isNaN(b)) {
+      alert("Input is not a number")
+    }
+    else {result = a * b;
+      document.getElementById("result").innerHTML = "Result Multiplication:" + result;
+    }
   }
   function division() {
     let a = +document.getElementById("n1").value;
     let b = +document.getElementById("n2").value;
-    let result = a / b;
-    document.getElementById("result").innerHTML = "Result Division:" + result;
+    let result;
+    if (isNaN(a) || isNaN(b)) {
+      alert("Input is not a number")
+    }
+    else {result = a / b;
+      document.getElementById("result").innerHTML = "Result Division:" + result;
+    }
   }
-
 </script>
-
 </body>
 </html>

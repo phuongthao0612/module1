@@ -12,37 +12,46 @@
         <th>To Currency</th>
     </tr>
     <tr>
-        <td><input id="amount" type="number"/></td>
+        <td><input id="amount"/></td>
         <td>
-            <select id="v">
+            <select id="fromCurrency">
                 <option value="Vietnam">Vietnam</option>
                 <option value="Usd">Usd</option>
             </select>
         </td>
         <td>
-            <select id="u">
+            <select id="toCurrency">
                 <option value="Vietnam">Vietnam</option>
                 <option value="Usd">Usd</option>
             </select>
         </td>
-        <td><button id="ketqua" onclick="convert()">Convert</button></td>
+        <td><button id="money" onclick="convert()">Convert</button></td>
     </tr>
 </table>
 <p id="result"></p>
 <script>
     function convert(){
-        let a = document.getElementById("v").value;
-        let b = document.getElementById("u").value;
-        let number = +document.getElementById("amount").value;
+        let a = document.getElementById("fromCurrency").value;
+        let b = document.getElementById("toCurrency").value;
+        let c = +document.getElementById("amount").value;
         let result;
-        if(a == "Vietnam" && b == "Usd" ){result =  number / 23000 ;
-            document.getElementById("result").innerHTML = "Result:" + result + "Usd";
-            }
-            else if( a == "Usd" && b == "Vietnam" ){result = number * 23000;
-            document.getElementById("result").innerHTML = "Result:" + result + "Vietnam";
-            }
-            else {alert("error");}
+        if(isNaN(c)){
+            alert("Amount is not a number")
         }
+        else{
+            if (a == "Vietnam" && b == "Usd" && c > "0") {
+                result = c / 23000;
+                document.getElementById("result").innerHTML = "Result:" + result + "Usd";
+            }
+            else if (a == "Usd" && b == "Vietnam" && c > "0") {
+                result = c * 23000;
+                document.getElementById("result").innerHTML = "Result:" + result + "Vietnam";
+            }
+            else {
+                alert("Error");
+            }
+        }
+    }
 </script>
 </body>
 </html>

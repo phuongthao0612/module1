@@ -35,22 +35,20 @@
         let b = document.getElementById("toCurrency").value;
         let c = +document.getElementById("amount").value;
         let result;
-        if(Number.isNaN(c)){
-            alert("Amount is not a number")
+        if(Number.isNaN(c) || c < "0"){
+            alert("Amount is not valid")
         }
-        else{
-            if (a == "Vietnam" && b == "Usd" && c > "0") {
+        else if (a == "Vietnam" && b == "Usd") {
                 result = c / 23000;
                 document.getElementById("result").innerHTML = "Result:" + result + "Usd";
             }
-            else if (a == "Usd" && b == "Vietnam" && c > "0") {
+            else if (a == "Usd" && b == "Vietnam") {
                 result = c * 23000;
                 document.getElementById("result").innerHTML = "Result:" + result + "Vietnam";
             }
             else {
                 alert("Error");
             }
-        }
     }
 </script>
 </body>

@@ -12,16 +12,16 @@
     <td><input id="age"/></td>
   </tr>
   <tr>
-    <td><button id="check" onclick="result()">Kết quả</button></td>
+    <td><button id="check" onclick="check()">Kết quả</button></td>
   </tr>
 </table>
 <script>
-  function result(){
-    let a = +document.getElementById("age").value;
-    if(Number.isNaN(a) || a < "0"){
+  function check(){
+    let age = +document.getElementById("age").value;
+    if(Number.isNaN(age) || age < 0 || age > 120){
           alert("Input is not valid")
     }
-    else if (a < 15){
+    else if (age < 15){
             document.write("Học sinh không đủ tuổi vào lớp 10");
         }
         else

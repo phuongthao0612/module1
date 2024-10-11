@@ -24,19 +24,19 @@
         <td><input id="finaltest" type="number"/></td>
     </tr>
     <tr>
-        <td><button id="grade" onclick="xeploai()">Xếp loại</button></td>
+        <td><button id="grade" onclick="grade()">Xếp loại</button></td>
     </tr>
 </table>
 <p id="result"></p>
 <script>
-    function xeploai(){
-        let a = +document.getElementById("test").value;
-        let b = +document.getElementById("midtermtest").value;
-        let c = +document.getElementById("finaltest").value;
-        let score = (a + b * 2 + c * 3) / 6;
+    function grade(){
+        let test = +document.getElementById("test").value;
+        let test2 = +document.getElementById("midtermtest").value;
+        let test3 = +document.getElementById("finaltest").value;
+        let score = (test + test2 * 2 + test3 * 3) / 6;
         let result = score;
-        if(Number.isNaN(a) || Number.isNaN(b) || Number.isNaN(c) || a < "0" || b < "0" || c < "0"
-            || a > "10" || b > "10" || c > "10"){
+        if(Number.isNaN(test) || Number.isNaN(test2) || Number.isNaN(test3) || test < 0 || test2 < 0 || test3 < 0
+            || test > 10 || test2 > 10 || test3 > 10){
             alert("Input is not valid")
         }
         else if(score >=8){

@@ -16,17 +16,17 @@
         <td colspan="2"><input id="height"/></td>
     </tr>
     <tr>
-        <td><button id="check" onclick="kiemtra()">Kiểm tra</button></td>
+        <td><button id="check" onclick="check()">Kiểm tra</button></td>
     </tr>
 </table>
 <p id="result"></p>
 <script>
-    function kiemtra(){
-        let a = +document.getElementById("weight").value;
-        let b = +document.getElementById("height").value;
-        let bmi = a / (b * b);
+    function check(){
+        let weight = +document.getElementById("weight").value;
+        let height = +document.getElementById("height").value;
+        let bmi = weight / (height * height);
         let result = bmi;
-        if(Number.isNaN(a) || Number.isNaN(b) || a < "0" || b < "0"){
+        if(Number.isNaN(weight) || Number.isNaN(height) || weight < 0 || height < 0){
             alert("Input is not a number")
         }
         else {

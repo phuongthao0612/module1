@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Học lực của học sinh</h1>
+<table>
+  <tr>
+    <td>Họ và tên:</td>
+    <td><input id="name" type="text"/></td>
+  </tr>
+  <tr>
+    <td>Điểm bài kiểm tra:</td>
+    <td><input id="test" type="number"/></td>
+  </tr>
+  <tr>
+      <td>Điểm thi giữa kỳ:</td>
+      <td><input id="midtermtest" type="number"/></td>
+  </tr>
+    <tr>
+        <td>Điểm thi cuối kỳ:</td>
+        <td><input id="finaltest" type="number"/></td>
+    </tr>
+    <tr>
+        <td><button id="grade" onclick="xeploai()">Xếp loại</button></td>
+    </tr>
+</table>
+<p id="result"></p>
+<script>
+    function xeploai(){
+        let a = +document.getElementById("test").value;
+        let b = +document.getElementById("midtermtest").value;
+        let c = +document.getElementById("finaltest").value;
+        let score = (a + b * 2 + c * 3) / 6;
+        let result = score;
+        if(Number.isNaN(a) || Number.isNaN(b) || Number.isNaN(c) || a < "0" || b < "0" || c < "0"
+            || a > "10" || b > "10" || c > "10"){
+            alert("Input is not valid")
+        }
+        else if(score >=8){
+                document.write("Xếp hạng Giỏi")
+            }
+            else if(score >=6.5){
+                document.write("Xếp hạng Khá")
+            }
+            else if(score >=5){
+                document.write("Xếp hạng Trung Bình")
+            }
+            else {document.write("Xếp hạng Kém")
+            }
+    }
+</script>
+</body>
+</html>

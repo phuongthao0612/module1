@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Học sinh vào lớp 10</h1>
+<table>
+  <tr>
+    <td>Tuổi</td>
+    <td><input id="age"/></td>
+  </tr>
+  <tr>
+    <td><button id="check" onclick="result()">Kết quả</button></td>
+  </tr>
+</table>
+<script>
+  function result(){
+    let a = +document.getElementById("age").value;
+    if(Number.isNaN(a) || a < "0"){
+          alert("Input is not valid")
+    }
+    else if (a < 15){
+            document.write("Học sinh không đủ tuổi vào lớp 10");
+        }
+        else
+        {document.write("Học sinh đủ tuổi vào lớp 10");
+        }
+  }
+</script>
+</body>
+</html>

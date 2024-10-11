@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <tr>
+    <td>Họ tên nhân viên:</td>
+    <td><input id="name" type="text"/></td>
+  </tr>
+  <tr>
+    <td>Doanh số bán hàng:</td>
+    <td><input id="money" type="number"/></td>
+  </tr>
+  <tr>
+    <td><button id="commission" onclick="tienhoahong()">Tiền hoa hồng</button></td>
+  </tr>
+</table>
+<p id="result"/>
+<script>
+  function tienhoahong(){
+    let a = +document.getElementById("money").value;
+    let result;
+    if (Number.isNaN(a) || a < "0"){
+      alert("Error");
+    }
+    else if (a <= "10000000") {
+      result = a * 0.05;
+      document.getElementById("result").innerHTML = "Hoa Hồng =" + result + "dong";
+    }
+    else if (a <= "30000000") {
+      result = a * 0.1;
+      document.getElementById("result").innerHTML = "Hoa Hồng =" + result + "dong";}
+    else {
+      result = a * 0.15;
+      document.getElementById("result").innerHTML = "Hoa Hồng =" + result + "dong";
+    }
+  }
+</script>
+</body>
+</html>

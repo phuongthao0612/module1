@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Giải phương trình bậc 2</h1>
+<input id="a" type="number">x<xup>2</xup> +
+<input id="b" type="number">x +
+<input id="c" type="number"> = 0
+<br><br>
+<button onclick="calc()">Tìm x</button>
+<script>
+  function calc(){
+    let a = +document.getElementById("a").value;
+    let b = +document.getElementById("b").value;
+    let c = +document.getElementById("c").value;
+    let delta = b * b - 4 * a * c;
+    if (Number.isNaN(a) || Number.isNaN(b) || Number.isNaN(c) || a === 0){
+      document.write("Error")
+    }
+    if (delta > 0){
+      let x1 = ((-b + Math.sqrt(delta)) / (2 * a))
+      let x2 = ((-b - Math.sqrt(delta)) / (2 * a));
+      document.write("Phương trình có nghiệm = " + x1.toFixed(2) + "và" + x2.toFixed(2));
+    }
+    else if (delta === 0){
+      let x = -b / (2 * a) ;
+      document.write("Phương trình có nghiệm =" + x.toFixed(2));
+    }
+    else {document.write("Phương trình vô nghiệm")}
+  }
+
+</script>
+
+</body>
+</html>

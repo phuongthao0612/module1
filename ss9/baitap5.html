@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính diện tích tam giác vuông</h1>
+<table>
+  <tr>
+    <td>Cạnh a (m):</td>
+    <td><input id="base" type ="number"/></td>
+  </tr>
+  <tr>
+    <td>Cạnh b (m):</td>
+    <td><input id="height" type ="number"/></td>
+  </tr>
+  <tr>
+    <td><button id="area" onclick="calc()">Kết quả</button></td>
+  </tr>
+</table>
+<script>
+  function calc() {
+    let base = +document.getElementById("base").value;
+    let height = +document.getElementById("height").value;
+    let area = (base * height) / 2;
+    if (Number.isNaN(base) || Number.isNaN(height) || base < 0 || height < 0) {
+      alert("Input is not valid")
+    } else {
+      document.write("Diện tích =" +area + "m2");}
+  }
+</script>
+
+</body>
+</html>

@@ -10,23 +10,20 @@
 <input id="n3"/>
 <button id="max" onclick="max()">Tìm giá trị</button>
 <script>
-    function max(){
-    let a = +document.getElementById("n1").value;
-    let b = +document.getElementById("n2").value;
-    let c = +document.getElementById("n3").value;
-    if(Number.isNaN(a) || Number.isNaN(b) || Number.isNaN(c)){
-        alert("Input is not a number")
-    }
-    else if (a % 1 == 0 && b % 1 == 0 && c % 1 == 0){
-            if (a >b && a > c){
+    function max() {
+        let a = +document.getElementById("n1").value;
+        let b = +document.getElementById("n2").value;
+        let c = +document.getElementById("n3").value;
+        if (Number.isInteger(a) && Number.isInteger(b) && Number.isInteger(c)) {
+            if (a > b && a > c) {
                 document.write("max =" + a)
-            }
-            else if(b > c){
+            } else if (b > c) {
                 document.write("max =" + b)
-            }
-            else {document.write("max =" + c)
+            } else {
+                document.write("max =" + c)
             }
         }
+        else {alert("Input is not valid")}
     }
 </script>
 </body>

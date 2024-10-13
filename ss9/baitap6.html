@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Giải phương trình bậc 1</h1>
+<input id="a" type="number">x + <input id="b" type="number"> = 0
+<br><br>
+<button onclick="calc()">Tìm x</button>
+<script>
+  function calc(){
+    let a = +document.getElementById("a").value;
+    let b = +document.getElementById("b").value;
+    let x = -b / a;
+    if(Number.isNaN(a) || Number.isNaN(b)){
+      alert("Error")
+    }
+    else if(a === 0){document.write("Phương trình vô nghiệm")
+    }
+    else {document.write("x=" + x.toFixed(2))
+    }
+  }
+</script>
+
+
+</body>
+</html>

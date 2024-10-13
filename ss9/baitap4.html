@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính diện tích hình chữ nhật</h1>
+Chiều rộng (m):<input id="width" type="number"/>
+Chiều dài (m):<input id="height" type="number"/>
+<button id="area" onclick="calc()">Kết quả</button>
+<script>
+  function calc(){
+    let width = +document.getElementById("width").value;
+    let height = +document.getElementById("height").value;
+    let area = width * height;
+    if(Number.isNaN(width) || Number.isNaN(height) || width < 0 || height < 0){
+      alert("Input is not valid")
+    }
+    else {document.write("Diện tích =" + area + "m2");}
+  }
+</script>
+</body>
+</html>

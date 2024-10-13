@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính lãi ngân hàng</h1>
+<table>
+  <tr>
+    <td>Số tiền ban đầu:</td>
+    <td><input id="money" type="number"></td>
+  </tr>
+  <tr>
+    <td>Số tháng:</td>
+    <td><input id="month" type="number"></td>
+  </tr>
+  <tr>
+    <td>Lãi suất hàng tháng:</td>
+    <td><input id="interest" type="number"></td>
+  </tr>
+  <tr>
+    <td><button id="click" onclick="calc()">Tính</button></td>
+  </tr>
+</table>
+<p id="result"></p>
+<script>
+  function calc() {
+    let money = +document.getElementById("money").value;
+    let month = +document.getElementById("month").value;
+    let interest = +document.getElementById("interest").value;
+    let result = money * Math.pow((1 + interest / month),month);
+    if (Number.isNaN(money) || Number.isNaN(month) || Number.isNaN(interest) ||
+            money < 0 || month < 0 || interest < 0) {
+      alert("Error")
+    } else {
+      document.getElementById("result").innerHTML = "Tiền lãi:" + result.toFixed(0) + "vnd";
+    }
+  }
+</script>
+</body>
+</html>

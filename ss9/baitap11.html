@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính thuế thu nhập cá nhân</h1>
+<table>
+    <tr>
+        <td>Thu nhập:</td>
+        <td><input id="income" type="number"></td>
+    </tr>
+    <tr>
+        <td>Số người phụ thuộc:</td>
+        <td><input id="no" type="number"></td>
+    </tr>
+    <tr>
+        <td><button id="click" onclick="check()">Tính thuế TNCN</button></td>
+    </tr>
+</table>
+<p id="result"></p>
+<script>
+    function check(){
+        let income = +document.getElementById("income").value;
+        let no = +document.getElementById("no").value;
+        let result = (income - 11000000 - no * 4400000) * 0.1;
+        if (Number.isNaN(income) || Number.isNaN(no) || income < 0 || no < 0){
+            alert("Error")
+        }
+        else if (result < 0){
+            document.getElementById("result").innerHTML = "Không phải đóng thuế";
+        }
+        else {document.getElementById("result").innerHTML = "Tiền thuế là:" + result + "vnd";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Tuổi: <input id="age" type="number">
+<button id="result" onclick="check()">Check</button>
+<script>
+    function check() {
+        let age = +document.getElementById("age").value;
+        if (Number.isInteger(age) && age > 0 && age < 120){
+            document.write("Số tuổi của một người");
+        }
+        else {
+            document.write("Không phải là số tuổi của một người");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính giá điện</h1>
+Số điện: <input id="dien" type="number">
+<button id="click" onclick="calc()">Tiền điện</button>
+</body>
+<p id="result"></p>
+<script>
+    function calc(){
+        let dien = +document.getElementById("dien").value;
+        let bac1 = 1806;
+        let bac2 = 1866;
+        let bac3 = 2167;
+        let bac4 = 2729;
+        let bac5 = 3050;
+        let bac6 = 3151;
+        let result;
+        if(Number.isNaN(dien) || dien < 0){
+            alert("Input is not a number");
+        }
+        else if(dien <= 50){result = dien * bac1;
+            document.getElementById("result").innerHTML = "Tiền điện =" + result + "vnd";
+        }
+        else if(dien <= 100){result = (50 * bac1) + (dien - 50) * bac2;
+            document.getElementById("result").innerHTML = "Tiền điện =" + result + "vnd";
+        }
+        else if(dien <= 200){result = (50 * bac1) + (50 * bac2) + (dien - 100) * bac3;
+            document.getElementById("result").innerHTML = "Tiền điện =" + result + "vnd";
+        }
+        else if(dien <= 300){result = (50 * bac1) + (50 * bac2) + (100 * bac3) + (dien - 200) * bac4;
+            document.getElementById("result").innerHTML = "Tiền điện =" + result + "vnd";
+        }
+        else if(dien <= 400){result = (50 * bac1) + (50 * bac2) + (100 * bac3) + (100 * bac4) + (dien - 300) * bac5;
+            document.getElementById("result").innerHTML = "Tiền điện =" + result + "vnd";
+        }
+        else {result = (50 * bac1) + (50 * bac2) + (100 *bac3) + (100 * bac4) + (100 * bac5) + (dien - 400) * bac6;
+            document.getElementById("result").innerHTML = "Tiền điện =" + result + "vnd";
+        }
+    }
+</script>
+</html>

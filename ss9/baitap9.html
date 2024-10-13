@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+a: <input id="a" type="number"><br><br>
+b: <input id="b" type="number"><br><br>
+c: <input id="c" type="number"><br><br>
+<button id="result" onclick="check()">Kiểm tra</button>
+<script>
+  function check(){
+    let a = +document.getElementById("a").value;
+    let b = +document.getElementById("b").value;
+    let c = +document.getElementById("c").value;
+    if(Number.isNaN(a) || Number.isNaN(b) || Number.isNaN(c)){
+      alert("Input is not a number")
+    }
+    else if(a > 0 && b > 0 && c > 0 && a + b > c && b + c > a && a + c > b){
+      document.write("a,b,c là cạnh của một tam giác")
+    }
+    else {document.write("a,b,c không phải là cạnh của một tam giác")}
+  }
+</script>
+</body>
+</html>

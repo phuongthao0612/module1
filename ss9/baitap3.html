@@ -11,11 +11,12 @@ Cạnh (m): <input id="side" type="number"/><br><br>
 <script>
   function calc(){
     let side = +document.getElementById("side").value;
-    let area = side * side;
+    let area;
     if(Number.isNaN(side) || side < 0){
       alert("Input is not valid")
     }
-    else {document.write("Diện tích =" + area + "m2");
+    else {area = side * side;
+        document.write("Diện tích =" + area + "m2");
     }
   }
 </script>

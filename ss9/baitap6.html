@@ -13,13 +13,18 @@
   function calc(){
     let a = +document.getElementById("a").value;
     let b = +document.getElementById("b").value;
-    let x = -b / a;
+    let x;
     if(Number.isNaN(a) || Number.isNaN(b)){
       alert("Error")
     }
-    else if(a === 0){document.write("Phương trình vô nghiệm")
+    else if(a === 0) {
+        if (b === 0) {document.write("Phương trình vô số nghiệm")
+        }
+        else {document.write("Phương trình vô nghệm")
+        }
     }
-    else {document.write("x=" + x.toFixed(2))
+    else {x = -b / a;
+        document.write("x=" + x.toFixed(2))
     }
   }
 </script>

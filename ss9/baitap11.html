@@ -24,14 +24,17 @@
     function check(){
         let income = +document.getElementById("income").value;
         let no = +document.getElementById("no").value;
-        let result = (income - 11000000 - no * 4400000) * 0.1;
         if (Number.isNaN(income) || Number.isNaN(no) || income < 0 || no < 0){
             alert("Error")
         }
-        else if (result < 0){
-            document.getElementById("result").innerHTML = "Không phải đóng thuế";
-        }
-        else {document.getElementById("result").innerHTML = "Tiền thuế là:" + result + "vnd";
+        else {
+            let result = (income - 11000000 - no * 4400000) * 0.1;
+            if (result < 0) {
+                document.getElementById("result").innerHTML = "Không phải đóng thuế";
+            }
+            else {
+                document.getElementById("result").innerHTML = "Tiền thuế là:" + result + "vnd";
+            }
         }
     }
 </script>

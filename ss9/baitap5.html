@@ -23,10 +23,10 @@
   function calc() {
     let base = +document.getElementById("base").value;
     let height = +document.getElementById("height").value;
-    let area = (base * height) / 2;
+    let area;
     if (Number.isNaN(base) || Number.isNaN(height) || base < 0 || height < 0) {
       alert("Input is not valid")
-    } else {
+    } else {area = (base * height) / 2
       document.write("Diện tích =" +area + "m2");}
   }
 </script>

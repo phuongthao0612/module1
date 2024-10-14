@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {text-align: center;}
+        table, tr, td {border: 1px solid; text-align: right;}
+    </style>
+</head>
+<body>
+<script>
+    document.write("<h1>Bảng cửu chương</h1>" + "<table>")
+    for(i = 1; i <= 9; i++) {
+        document.write("<tr>");
+        for (j = 2; j <= 9; j++) {
+            document.write("<td>" + j + "x" + i + "=" + (j * i) + "</td>");
+        }
+            document.write("</tr>");
+    }
+    document.write("</table>");
+
+</script>
+</body>
+</html>

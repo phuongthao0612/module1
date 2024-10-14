@@ -13,11 +13,12 @@ Chiều dài (m):<input id="height" type="number"/>
   function calc(){
     let width = +document.getElementById("width").value;
     let height = +document.getElementById("height").value;
-    let area = width * height;
+    let area;
     if(Number.isNaN(width) || Number.isNaN(height) || width < 0 || height < 0){
       alert("Input is not valid")
     }
-    else {document.write("Diện tích =" + area + "m2");}
+    else {area = width * height;
+        document.write("Diện tích =" + area + "m2");}
   }
 </script>
 </body>

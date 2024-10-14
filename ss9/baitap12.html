@@ -29,11 +29,10 @@
     let money = +document.getElementById("money").value;
     let month = +document.getElementById("month").value;
     let interest = +document.getElementById("interest").value;
-    let result = money * Math.pow((1 + interest / month),month);
     if (Number.isNaN(money) || Number.isNaN(month) || Number.isNaN(interest) ||
             money < 0 || month < 0 || interest < 0) {
-      alert("Error")
-    } else {
+      alert("Error")}
+    else {let result = money * Math.pow((1 + interest / month),month);
       document.getElementById("result").innerHTML = "Tiền lãi:" + result.toFixed(0) + "vnd";
     }
   }

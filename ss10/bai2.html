@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let value = +prompt("Nhiệt độ hiện tại")
+  while (value < 20 || value > 100) {
+    if (value < 20) {
+      alert("Tăng nhiệt độ")
+      value = +prompt("Nhiệt độ hiện tại")
+    }
+    else if (value > 100) {
+      alert("Giảm nhiệt độ")
+      value = +prompt("Nhiệt độ hiện tại")
+    }
+  }
+  alert("Nhiệt độ bình thường")
+</script>
+</body>
+</html>

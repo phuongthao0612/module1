@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = +prompt("Mời bạn nhập số");
+    let result = 1;
+    while (Number.isNaN(number) || number < 0) {
+        alert("Mời bạn nhập lại")
+        number = +prompt("Mời bạn nhập lại")
+    }
+    if (number === 0 || number === 1) {
+        result = 1
+    } else {
+        for (i = 1; i <= number; i++)
+            result = result * i
+    }
+    document.write("Giai thừa của" + number + "=" + result)
+</script>
+
+</body>
+</html>

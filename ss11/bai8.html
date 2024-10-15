@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="click" onclick="click()">Chơi</button>
+<script>
+    document.getElementById("click").onclick = function click() {
+        let numberMax = +prompt("Số bạn muốn đoán trong khoảng lớn nhât là bao nhiêu?");
+        while (Number.isNaN(numberMax) || numberMax < 0) {
+            alert("Mời bạn nhập lại");
+            numberMax = +prompt("Số bạn muốn đoán trong khoảng lớn nhât là bao nhiêu?")
+        }
+        let number = +prompt("Mời bạn nhập số");
+        while (Number.isNaN(number)) {
+            alert("Mời bạn nhập lại");
+            number = +prompt("Mời bạn nhập số")
+        }
+        let numberRandom = Math.floor(Math.random() * numberMax);
+        let count = 0;
+        while (count < 3) {
+            if (number === numberRandom) {
+                alert("Bạn đã đoán đúng");
+                break;
+            } else if (number < numberRandom) {
+                alert("Số bạn nhập nhỏ hơn")
+                number = +prompt("Mời bạn nhập lại số")
+            } else {
+                alert("Số bạn nhập lớn hơn")
+                number = +prompt("Mời bạn nhập lại số")
+            }
+            count++;
+            if (count === 3) {
+                alert("Bạn đã hết lượt")
+            }
+        }
+    }
+</script>
+</body>
+</html>

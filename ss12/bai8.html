@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = []
+    for (let i = 0; i < 10; i++) {
+        numbers[i] = +prompt("Nhập số")
+    }
+    numbers.sort((a, b) => b - a);
+    document.write("Sắp xếp theo thứ tự giảm dần = [" + numbers + "]<br>")
+</script>
+</body>
+</html>

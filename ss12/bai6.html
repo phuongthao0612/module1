@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = []
+    for (let i = 0; i < 10; i++) {
+        numbers[i] = +prompt("Nhập số")
+    }
+    let V = +prompt("Nhập V")
+    if (numbers.includes(V)) {
+        document.write(V + "is in the array<br>")
+    } else {
+        document.write(V + "is not in the array<br>")
+    }
+    document.write("Mảng số nguyên = [" + numbers + "]<br>")
+</script>
+
+</body>
+</html>

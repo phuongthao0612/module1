@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = []
+    let max = 0;
+    let index = 0;
+    for (let i = 0; i < 10; i++) {
+        numbers[i] = +(prompt("Nhập số"))
+    }
+    document.write("numbers = [" + numbers + "]<br>")
+    for (let i = 0; i < numbers.length; i++) {
+        if (max < numbers[i]) {
+            max = numbers[i];
+            index = i;
+        }
+    }
+    document.write("Phần tử có giá trị lớn nhất là " + max + " vị trí [" + index + "]<br>")
+</script>
+</body>
+</html>

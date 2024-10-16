@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = []
+    let oddnumbers = []
+    for (let i = 0; i < 10; i++) {
+        numbers[i] = +prompt("Nhập số")
+        if (numbers[i] < 0) {
+            oddnumbers.push(numbers[i])
+        }
+    }
+    document.write("numbers = [" + numbers + "]<br>")
+    document.write("Các số nguyên âm "+oddnumbers.length+" phần tử = ["+oddnumbers+"]<br>")
+</script>
+</body>
+</html>

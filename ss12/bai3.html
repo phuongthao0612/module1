@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = []
+    let max = 0;
+    let total = 0;
+    for (let i = 0; i < 10; i++) {
+        numbers[i] = +(prompt("Nhập số"))
+    }
+    document.write("numbers = [" + numbers + "]<br>")
+    for (let i = 0; i < numbers.length; i++) {
+        if (max < numbers[i]) {
+            max = numbers[i];
+        }
+        total += numbers[i]
+    }
+    avg = total / numbers.length
+    document.write("Phấn tử có giá trị lớn nhất là " + max + "<br>")
+    document.write("Giá trị trung bình " + avg)
+
+</script>
+</body>
+</html>

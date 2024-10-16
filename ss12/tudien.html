@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập từ: <input id="english" type="text">
+<button id="click" onclick="click()">Dịch</button>
+<p id="vietnamese"></p>
+<script>
+    document.getElementById("click").onclick = function click() {
+        let english = document.getElementById("english").value;
+        let eng = ["apple", "banana", "orange", "pear", "avocado"];
+        let vie = ["quả táo", "quả chuối", "quả cam", "quả lê", "quả bơ"];
+        let count = 0;
+        for (i = 0; i < eng.length; i++) {
+            if (eng[i] === english) {
+                count = 0
+                document.getElementById("vietnamese").innerHTML = vie[i]
+                break;
+            } else {
+                count++
+            }
+        }
+        if (count !== 0) {
+            alert("Không có từ này")
+        }
+    }
+</script>
+</body>
+</html>

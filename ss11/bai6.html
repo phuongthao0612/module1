@@ -6,18 +6,21 @@
 </head>
 <body>
 <script>
-  let count = 0, total = 0
-  let dayso = "";
-  for (let i = 1; ; i++) {
-    if (i % 7 === 0) {
-      dayso += "" + i + "<br>"
-      total += i
-      count++;
-      if (count == 30) {break;}
+    let count = 0;
+    let total = 0;
+    let dayso = "";
+    for (let i = 1; ; i++) {
+        if (i % 7 === 0) {
+            dayso += "" + i + "<br>"
+            total += i
+            count++;
+            if (count == 30) {
+                break;
+            }
+        }
     }
-  }
-  document.write(dayso)
-  document.write("Tổng =" + total)
+    document.write(dayso)
+    document.write("Tổng =" + total)
 </script>
 </body>
 </html>

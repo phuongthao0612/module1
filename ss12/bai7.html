@@ -7,7 +7,7 @@
 <body>
 <script>
     let numbers = []
-    let newnumbers = []
+    let newNumbers = []
     for (let i = 0; i < 10; i++) {
         numbers[i] = +prompt("Nhập số")
     }
@@ -16,15 +16,14 @@
         document.write(V + "is in the array<br>")
         for (let i = 0; i < numbers.length; i++) {
             if (numbers[i] !== V) {
-                newnumbers.push(numbers[i])
+                newNumbers.push(numbers[i])
             }
         }
-        newnumbers.push(0);
     } else {
         document.write(V + "is not in the array<br>")
     }
     document.write("numbers = [" + numbers + "]<br>")
-    document.write("Mảng sau khi xóa V = [" + newnumbers + "]<br>")
+    document.write("Mảng sau khi xóa V = [" + newNumbers + "]<br>")
 
 </script>
 </body>

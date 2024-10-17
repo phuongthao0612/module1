@@ -13,17 +13,15 @@ Nhập từ: <input id="english" type="text">
         let english = document.getElementById("english").value;
         let eng = ["apple", "banana", "orange", "pear", "avocado"];
         let vie = ["quả táo", "quả chuối", "quả cam", "quả lê", "quả bơ"];
-        let count = 0;
+        let isFind = false;
         for (i = 0; i < eng.length; i++) {
             if (eng[i] === english) {
-                count = 0
+                isFind = true
                 document.getElementById("vietnamese").innerHTML = vie[i]
                 break;
-            } else {
-                count++
             }
         }
-        if (count !== 0) {
+        if (!isFind) {
             alert("Không có từ này")
         }
     }

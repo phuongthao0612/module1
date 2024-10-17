@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = prompt("Nhập ký tự")
+    document.write(`Mảng ký tự gồm: ${arr}<br>`)
+    let newArr = [];
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] === "-") {
+            newArr.push("_")
+        } else {
+            newArr.push(arr[i])
+        }
+    }
+    document.write(`Mảng mới gồm: ${newArr.join("")}<br>`)
+
+</script>
+
+</body>
+</html>

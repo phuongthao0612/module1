@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        let isPrime = true;
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        return isPrime;
+    }
+
+    function findPrimes() {
+        for (let number = 2; number <= 10000; number++) {
+            if (isPrime(number)) {
+                document.write(`${number} là số nguyên tố <br>`)
+            }
+        }
+    }
+
+    findPrimes();
+</script>
+</body>
+</html>

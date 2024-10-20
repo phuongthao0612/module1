@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function binhphuong(number) {
+        return number * number;
+    }
+
+    function calc() {
+        let number = +prompt("Nhập số");
+        while (isNaN(number)) {
+            alert("Mời bạn nhập lại số hợp lệ")
+            number = +prompt("Nhập số")
+        }
+        let square = binhphuong(number);
+        document.write(`Bình phương của ${number} = ${square}`)
+
+    }
+
+    calc();
+
+</script>
+
+</body>
+</html>

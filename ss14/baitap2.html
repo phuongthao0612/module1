@@ -6,12 +6,12 @@
 </head>
 <body>
 <script>
-    function dientich(r) {
+    function dienTich(r) {
         return r * r * Math.PI;
 
     }
 
-    function chuvi(r) {
+    function chuVi(r) {
         return 2 * r * Math.PI;
 
     }
@@ -22,8 +22,8 @@
             alert("Mời bạn nhập lại số hợp lệ")
             r = +prompt("Nhập bán kính")
         }
-        let area = dientich(r);
-        let perimeter = chuvi(r);
+        let area = dienTich(r);
+        let perimeter = chuVi(r);
         document.write(`Diện tích hình tròn = ${area.toFixed(2)} m2 <br>`)
         document.write(`Chu vi hình tròn = ${perimeter.toFixed(2)} m <br>`)
 

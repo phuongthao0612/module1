@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function soNguyenDuong(number) {
+        if (number > 0) {
+            return true
+        }
+    }
+
+    function check() {
+        let number = +prompt("Nhập số")
+        while (isNaN(number)) {
+            alert("Mời bạn nhập lại số hợp lệ")
+            number = +prompt("Nhập số")
+        }
+        let result = soNguyenDuong(number)
+        if (result) {
+            alert("Nhập vào số nguyên dương")
+        } else {
+            alert("Nhập vào không phải số nguyên dương")
+        }
+    }
+
+    check();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function daoMangSo(arr) {
+        return arr.reverse();
+
+    }
+
+    function mangSo() {
+        let arr = []
+        for (let i = 0; i < 5; i++) {
+            arr[i] = +prompt("Nhập số thứ" + (i + 1))
+        }
+        document.write(`Mảng số = ${arr}<br>`)
+        let newArr = daoMangSo(arr);
+        document.write(`Đảo mảng số = ${newArr}<br>`)
+
+    }
+
+    mangSo();
+</script>
+</body>
+</html>

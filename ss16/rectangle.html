@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100"></canvas>
+<div id="result"></div>
+<script>
+    class Rectangle {
+        height;
+        width;
+
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+
+        calculateArea() {
+            return this.width * this.height;
+        }
+
+        calculatePerimeter() {
+            return (this.height + this.width) * 2;
+        }
+    }
+
+    let rectangle = new Rectangle(20, 10);
+    let area = rectangle.calculateArea();
+    let perimeter = rectangle.calculatePerimeter();
+    let resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = `Rectangle Area = ${area}<br>Rectangle Perimeter = ${perimeter}`;
+
+
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    let grd = ctx.createLinearGradient(0, 0, 200, 0);
+    grd.addColorStop(0, "red");
+    grd.addColorStop(1, "white");
+    ctx.fillStyle = grd;
+    ctx.fillRect(10, 10, 150, 80);
+</script>
+</body>
+</html>

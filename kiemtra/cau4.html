@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Employee {
+        constructor(STT, name, date, address, salary, office) {
+            this.STT = STT;
+            this.name = name;
+            this.date = date;
+            this.address = address;
+            this.salary = salary;
+            this.office = office;
+        }
+    }
+
+    class Manager {
+        constructor() {
+            this.employees = [];
+        }
+        addEmployee(STT, name, date, address, salary, office) {
+            const employee = new Employee(STT, name, date, address, salary, office);
+            this.employees.push(employee);
+        }
+        getEmployees() {
+            return this.employees;
+        }
+    }
+    let manager = new Manager();
+    manager.addEmployee(1, "Trương Tấn A", "11-11-1997", "Quảng Nam", 2000, "Abc");
+    manager.addEmployee(2, "Trương Tấn B", "11-11-1998", "Đà Nẵng", 2000, "Abc");
+    manager.addEmployee(3, "Trương Tấn C", "11-11-1999", "Huế", 2000, "Abc");
+    console.log(manager.getEmployees());
+</script>
+
+</body>
+</html>

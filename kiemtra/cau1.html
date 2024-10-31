@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let sum = 0;
+    let count = 0;
+    for (let i = 0; i < 50; i++) {
+        let number = +prompt("Nhập số")
+        arr.push(number)
+        if (arr[i] % 3 === 0) {
+            sum += arr[i];
+            count++;
+        }
+    }
+    avg = sum / count;
+    document.write(`Mảng gồm: ${arr}<br>`)
+    document.write(`Trung bình cộng các số chia hết cho 3 = ${avg}`)
+</script>
+
+</body>
+</html>

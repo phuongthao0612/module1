@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check() {
+        let month = +prompt("Nhập tháng")
+        let year = +prompt("Nhập năm")
+        if (isNaN(month) || isNaN(year)) {
+            alert("Nhập lại: Tháng năm phải là số")
+            return null;
+        }
+        if (month < 1 || month > 12) {
+            alert("Nhập lại: Tháng từ 1 đến 12")
+            return null;
+        }
+        if (year < 1900 || year > 2100) {
+            alert("Nhập lại")
+            return null;
+        }
+        return { month, year };
+    }
+
+    function soNgay() {
+        let input = check()
+        if (!input) return
+        let {month, year} = input
+        let day;
+        if (month === 2) {
+            day = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0) ? 29 : 28;
+        } else if (month === 4 || month === 6 || month === 9 || month === 11) {
+            day = 30
+        } else {
+            day = 31
+        }
+        document.write(`Tháng ${month} năm ${year} có ${day} ngày`)
+    }
+    soNgay();
+
+</script>
+
+</body>
+</html>
